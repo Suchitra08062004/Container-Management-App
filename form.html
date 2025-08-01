@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>
+   function lw(){
+    let x=document.getElementById("cn").value;
+    let y=document.getElementById("ci").value;
+    const myhttp=new XMLHttpRequest();
+     myhttp.onreadystatechange=function(){
+        if(this.readyState==4){
+           document.getElementById("d1").innerHTML=myhttp.responseText;
+         }
+     }
+    myhttp.open("GET","http://localhost:2000/run?cname="+x+"&cimage="+y,true)
+    myhttp.send();
+   }
+   function lw2(){
+    const myhttp=new XMLHttpRequest();
+     myhttp.onreadystatechange=function(){
+        if(this.readyState==4){
+           document.getElementById("d2").innerHTML=myhttp.responseText;
+         }
+     }
+    myhttp.open("GET","http://localhost:2000/ps",true)
+    myhttp.send();
+   }
+   function lw3(){
+    let z=document.getElementById("n").value;
+    const myhttp=new XMLHttpRequest();
+     myhttp.onreadystatechange=function(){
+        if(this.readyState==4){
+           document.getElementById("d3").innerHTML=myhttp.responseText;
+         }
+     }
+    myhttp.open("GET","http://localhost:2000/run2?n="+z,true)
+    myhttp.send();
+   }
+function lw4(){
+    let s=document.getElementById("n1").value;
+    const myhttp=new XMLHttpRequest();
+     myhttp.onreadystatechange=function(){
+        if(this.readyState==4){
+           document.getElementById("d4").innerHTML=myhttp.responseText;
+         }
+     }
+    myhttp.open("GET","http://localhost:2000/run3?n1="+s,true)
+    myhttp.send();
+   }
+   function lw5(){
+    let p=document.getElementById("n2").value;
+    const myhttp=new XMLHttpRequest();
+     myhttp.onreadystatechange=function(){
+        if(this.readyState==4){
+           document.getElementById("d5").innerHTML=myhttp.responseText;
+         }
+     }
+    myhttp.open("GET","http://localhost:2000/run4?n2="+p,true)
+    myhttp.send();
+   }
+
+
+</script> 
+
+<div class="total">
+<div class="con1">
+<h1>CONTAINER MANAGEMENT APP</h1>
+
+<div class="content1">
+Container Name:<input name="cname" id="cn">
+<br/>
+Container Image:<select name="cimage" id="ci">
+  <option>ubuntu</option>
+  <option>nginx</option>
+  <option>python</option>
+  <option>node</option>
+  <option>mongo</option>
+</select>
+<br/>
+<div id="d1"></div>
+<button onclick="lw()">click me to submit</button>
+</div>
+</div>
+<div class="content2">
+<div id="d2"></div>
+<button onclick="lw2()">click me to view your container list</button>
+<br/>
+</div>
+<div class="content3">
+Container Name/Id You Want To Start:<input name="n" id="n">
+<br/>
+<button onclick="lw3()">click to start</button>
+<br/>
+<div id="d3"></div>
+<div class="content3-1">
+Container Name/Id You Want To Stop:<input name="n1" id="n1">
+<br/>
+<button onclick="lw4()">click to stop</button>
+<br/>
+</div>
+<div id="d4"></div>
+</div>
+<br/>
+<div class="content5">
+Container Name/Id You Want To remove:<input name="n2" id="n2">
+<br/>
+<button onclick="lw5()">click to remove</button>
+<br/>
+<div id="d5"></div>
+<br/>
+</div>
+</div>
+<script src="server.js"></script>
+
+</body>
+</html>
+

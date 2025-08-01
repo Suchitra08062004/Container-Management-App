@@ -1,0 +1,71 @@
+#d1{
+    height:20px;
+    width:120px;
+    border: 2px solid black;
+}
+#d2,#d3,#d4,#d5{
+    height:auto;
+    width:auto;
+    border: 2px solid black;
+
+}
+body{
+    background-image: url(docker.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color:#C6D8D3;
+    color: black;
+    
+   
+}
+.con1{
+    border: 2px solid black;
+    margin-left:500px;
+    width: fit-content;
+    padding: 10px;
+    margin-top: 80px;
+}
+.content1{
+    padding-left: 100px;
+}
+.content2{
+    margin-top: 50px;
+    width: fit-content;
+    margin-left: 650px;
+}
+.content3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: fit-content;
+    margin-left: 200px;
+    font-weight: bolder;
+}
+#d4{
+    width: fit-content;
+}
+.content3-1{
+    display: flex;
+}
+button{
+    background-color: black;
+    color: white;
+}
+.content5{
+    margin-top: 50px;
+    width: fit-content;
+    margin-left: 500px;
+    display: flex;
+    font-weight: bolder;
+}
+#d5{
+      width: fit-content;
+    
+}
+.total{
+    background-color: #FDF0D5;
+    border: 2px solid black;
+    margin-top: 120px;
+    
+}
